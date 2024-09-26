@@ -257,6 +257,7 @@ def format_time(time: datetime, user_info: UserInfo, time_format: str = "%-I:%M%
     else:
         formatted_time = time.astimezone(
             dateparser.utils.get_timezone_from_tz_string(user_info.timezone)).strftime(time_format)
+        formatted_time = "at " + formatted_time
     return formatted_time
 
 
