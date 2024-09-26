@@ -211,9 +211,9 @@ class Reminder(object):
                 if USE_CRON_DESCRIPTOR:
                     return f"{ExpressionDescriptor(self.cron_tab, casing_type=CasingTypeEnum.LowerCase)} (`{self.cron_tab}`), next run {next_run}"
                 else:
-                    return f"`{self.cron_tab}`, next run at {next_run}"
+                    return f"`{self.cron_tab}`, next run {next_run}"
             elif self.recur_every:
-                return f"every {self.recur_every}, next run at {next_run}"
+                return f"every {self.recur_every}, next run {next_run}"
             else: # once-off reminders
                 return next_run
 
