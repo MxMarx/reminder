@@ -222,7 +222,7 @@ def pluralize(val: int, unit: str) -> str:
         return f"{val} {unit}"
     return f"{val} {unit}s"
 
-def format_time(time: datetime, user_info: UserInfo, time_format: str = "%-I:%M%P %Z on %A, %B %-d %Y") -> str:
+def format_time(time: datetime, user_info: UserInfo, time_format: str = "%-I:%M%p %Z on %A, %B %-d %Y") -> str:
     """
     Format time as something readable by humans.
     Args:
